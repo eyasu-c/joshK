@@ -1,0 +1,123 @@
+
+body{
+    background-color: rgb(255, 243, 188);
+}
+.container{
+    max-width: 85%;
+    margin: auto;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+    align-items: center;
+    margin: auto;
+    font-weight: 800;
+}
+.logo h1{
+    font-weight: 900;
+    font-size: 2em;
+}
+.active{
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+.nav-list ul, .registration ul{
+    list-style: none;
+    align-items: center;
+    font-size: 13px;
+    display: flex;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    gap: 20px;
+}
+.registration ul li:nth-child(2){
+    background-color: rgb(255, 213, 97);
+    padding: 10px;
+    border-radius: 20px;
+}
+             /* main */
+main{
+    margin-top: -40px;
+}
+.hero h1{
+    font-size: 5em;
+    font-weight: 900;
+}
+.hero span{
+    font-size: 1.5em;
+    opacity: .6;
+    position: relative;
+    margin-top: -50px;
+}
+.hero button{
+    width: 15rem;
+    height: 2em;
+    background-color: greenyellow;
+    border: none;
+    margin: 20px 0;
+    font-size: 1.5em;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.social{
+    display: flex;
+    list-style: none;
+    gap: 70px;
+    margin: 100px 0;
+}
+.social li{
+    background-color: #000;
+    padding: 10px;
+    align-items: center;
+    border-radius: 40%;
+}
+.scroll{
+    margin-top: -120px;
+}
+.mobile-li{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100% ;
+    background-color: #009999;
+    
+}
+.mobile-li ul{
+    display: flex;
+    list-style: none;
+    font-size: 1em;
+    color: #fff;
+    justify-content: space-around;
+}
+article{
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    grid-auto-flow: dense;
+    margin: auto;
+    gap: 1px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@media (min-width: 730px){
+    .mobile-nav{
+        display: none;
+    }
+}
+@media (max-width: 730px){
+    .nav-list{
+        display: none;
+    }
+    .hero h1{
+        font-size: 3em;
+    }
+    .hero span{
+        font-size: 1em;
+    }
+    .container{
+        max-width: 95%;
+        margin: auto;
+    }
+}

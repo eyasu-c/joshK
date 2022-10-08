@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-form template design</title>
+    <style type="text/css">
+
+        .container{
+            width: 100% auto;
+            margin: auto;
+            place-content: center;
+            min-height: 70vh;
+            background: url(assets/portfolio/Download\ premium\ png\ of\ Blue\ gradient\ curve\ frame\ template\ design\ element\ by\ wifiseeker\ about\ blue\ backgrounds\ png\,\ background\ blue\,\ backdrop\,\ frame\,\ and\ png\ 2346094.jpg);
+            background-size: cover;
+            /* background: rgba( 255, 255, 255, 0.3 ); */
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 6.5px );
+            -webkit-backdrop-filter: blur( 6.5px );
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.459);
+            overflow: hidden;
+        }
+        .contact-form{
+            max-width: 90%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+            grid-auto-flow: dense;
+            margin: auto;
+            gap: 100px;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .name-part{display: flex;gap: 10px;margin: 0 0 3%;}
+        .inputN{
+            position: relative;
+            width: 300px;
+            display: flex;
+            border-radius: 5px;
+        }
+        .inputN input{
+            width: 100%;
+            background: transparent;
+            padding: 10px;
+            outline: none;
+            border-radius: 5px;
+            color: rgb(0, 0, 0);
+            border: 1px solid #009999;
+            font-size: 1em;
+        }
+        .inputN span{
+            position: absolute;
+            left: 0;
+            font-size: 0.9em;
+            padding: 10px;
+            pointer-events: none;
+            color: #009999;
+            text-transform: uppercase;
+            transition: .3s;
+        }
+        .inputN input:valid ~ span,
+        .inputN input:focus ~ span{
+            color: #0099ff;
+            transform: translateX(10px) translateY(-10px);
+            padding: 0 15px;
+            font-size: 0.95em;
+            background: #fff;
+            border:  1px solid #0099ff;
+            /* border-left:  1px solid #0099ff; */
+            /* border-right: 1px solid #0099ff; */
+            letter-spacing: 0.2em;
+        }
+        .inputN input:valid,
+        .inputN input:focus{
+            border: 1px solid #0099ff;
+        }
+        /* net part */
+        .net-part{display: flex;gap: 10px;}
+        .Net{
+            position: relative;
+            width: 300px;
+            display: flex;
+        }
+        .Net input{
+            width: 100%;
+            background: transparent;
+            padding: 10px;
+            outline: none;
+            border-radius: 5px;
+            color: rgb(0, 0, 0);
+            border: 1px solid #009999;
+            font-size: 1em;
+        }
+        .Net span{
+            position: absolute;
+            font-size: 0.95em;
+            left: 0;
+            padding: 10px;
+            pointer-events: none;
+            color: #009999;
+            text-transform: uppercase;
+            transition: .3s;
+        }
+        .Net input:valid ~ span,
+        .Net input:focus ~ span{
+            color: #0099ff;
+            transform: translateX(10px) translateY(-10px);
+            padding: 0 15px;
+            font-size: 0.95em;
+            background: #fff;
+            border:  1px solid #0099ff;
+            /* border-left:  1px solid #0099ff; */
+            /* border-right: 1px solid #0099ff; */
+            letter-spacing: 0.2em;
+        }
+        .Net input:valid,
+        .Net input:focus{
+            border: 1px solid #0099ff;
+        }
+        /* message-part */
+        .message-part{
+            margin: 50px 0;
+            position: relative;
+            max-width: 520px;
+            display: flex;
+            max-height: 60vh;
+        }
+        .message-part textarea{
+            width: 100%;
+            background: transparent;
+            padding: 10px;
+            border-radius: 5px;
+            outline: none;
+            width: 510px;
+            resize: none;
+            color: rgb(0, 0, 0);
+            border: .1px solid #009999;
+            height: 40vh;
+            font-size: 1.5em;
+        }
+        .message-part span{
+            position: absolute;
+            left: 0;
+            padding: 10px;
+            pointer-events: none;
+            font-size: .9em;
+            color: #009999;
+            text-transform: uppercase;
+            transition: .3s;
+        }
+        .message-part textarea:valid ~ span,
+        .message-part textarea:focus ~ span{
+            color: #0099ff;
+            transform: translateX(10px) translateY(-10px);
+            padding: 0 15px;
+            background: #fff;
+            border:  1px solid #0099ff;
+            /* border-left:  1px solid #0099ff; */
+            /* border-right: 1px solid #0099ff; */
+            letter-spacing: 0.2em;
+        }
+        .message-part textarea:valid,
+        .message-part textarea:focus{
+            border: 1px solid #0099ff;
+        }
+        .contact-head{
+            align-items: center;
+            margin: auto;
+            margin-left: 50px;
+        }
+        .contact-head h1{
+            font-size: 2.5em;
+            color: rgb(56, 46, 100);
+            font-family: 'Arial Narrow Bold', sans-serif;
+            font-weight: 900;
+        }
+        .contact-head h1 b{
+            color: #0099ff;
+        }
+        .contact-head h1 b span{
+            color: #ff0000;
+            font-size: 1.5em;
+        }
+        .help-testimo{
+            max-width: 70%;
+        }
+        .help-testimo span{
+            font-size: 20px;
+        }
+        .help-testimo h3{
+            font-weight: 600;
+            font-family: 'Arial Narrow Bold', sans-serif;
+            font-size: 1.5em;
+        }
+        form button{
+            width: 10rem;
+            height: 2.5em;
+            margin: 10px 0;
+            text-align: center;
+            background: #0099ff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            float: right;
+        }
+        form button:hover{
+            border: 1px solid #0099ff;
+            color: #0099ff;
+            background: transparent;
+        }
+        .right-form{
+            width: 100%;
+        }
+        
+        .active{
+            color: #00eeff;
+        }
+        /* js function */
+        
+    </style>
+</head>
+<body>
+
+   <div id="container" class="container">
+       <div class="col-main">
+        <div class="contact-head">
+            <h1>Fill The Form To <br><b>Contact Us <span>.</span></b></h1>
+        </div>
+        <div class="contact-form">
+        <div class="right-form">
+            <form action="">
+                <div class="name-part">
+                    <div class="inputN fname">
+                        <input type="text" name="fname" id="fname" required>
+                        <span>First Name</span>
+                    </div>
+                    <div class="inputN lname">
+                        <input type="text" name="lname" id="lname" required>
+                        <span>Last Name</span>
+                    </div>
+                </div>
+                <div class="net-part">
+                    <div class="Net email">
+                        <input type="email" name="email" id="email" required>
+                        <span>Email</span>
+                    </div>
+                    <div class="Net phone">
+                        <input type="text" name="phone" id="phone" required>
+                        <span>Phone</span>
+                    </div>
+                </div>
+                <div class="message-part">
+                    <textarea name="tea" id=""  col="40" row="10" required></textarea>
+                    <span>How We can Help You ?</span>
+                </div>
+                <button>Send message</button>
+            </form>
+        </div>
+        <div class="help-testimo">
+            <h3>Need specific Help <span>?</span></h3>
+            <span>if you don't want contact us for an help ? <br> you can download our diagnostic app and follow the instructions.</span>
+            <br>
+            <span style="align-items: center;display: flex;gap: 10px;color:#0099ffa6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #0099ff;"><path d="M18.948 11.112C18.511 7.67 15.563 5 12.004 5c-2.756 0-5.15 1.611-6.243 4.15-2.148.642-3.757 2.67-3.757 4.85 0 2.757 2.243 5 5 5h1v-2h-1c-1.654 0-3-1.346-3-3 0-1.404 1.199-2.757 2.673-3.016l.581-.102.192-.558C8.153 8.273 9.898 7 12.004 7c2.757 0 5 2.243 5 5v1h1c1.103 0 2 .897 2 2s-.897 2-2 2h-2v2h2c2.206 0 4-1.794 4-4a4.008 4.008 0 0 0-3.056-3.888z"></path><path d="M13.004 14v-4h-2v4h-3l4 5 4-5z"></path></svg>
+                diagnostic_app.exe(40mb)
+            </span>
+        </div>
+        </div>
+       </div>
+   </div>
+    
+</body>
+</html>

@@ -1,0 +1,136 @@
+
+
+.signup-page,
+.login-page{
+    height: 90vh;
+    margin: 3%;
+    background: rgba( 255, 255, 255, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-auto-flow: dense;
+    margin: auto;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-around;
+    transition: 1s;
+}
+.something{
+    background-color: #1bd3d3;
+    width: 100%;
+    height: 90vh;
+    margin: auto;
+    border-radius: 10px;
+}
+.signup{
+    margin: auto;
+    text-align: center;
+}
+.hero{
+    font-size: 3em;
+}
+.slogan{
+    color: #fff;
+    margin: auto;
+    text-align: center;
+    margin-top: 50%;
+}
+.hero-slogan h1{
+    font-size: 3em;
+}
+.hero-slogan button{
+    width: 10rem;
+    text-align: center;
+    height: 3em;
+    color: #ffffff;
+    border: 1px Solid #ffffff;
+    background-color: transparent;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.social_opt{
+    display: flex;
+    margin: auto;
+    place-content: center;
+    gap: 20px;
+    list-style: none;
+}
+.social_opt li{
+    background-color: rgb(240, 240, 240);
+    border-radius: 50%;
+    padding: 10px;
+    width: 30px;
+    border: .1px solid #00999948;
+}
+.form{
+    display: flex;
+    margin: auto;
+    place-content: center;
+    justify-content: center;
+}
+form{
+    margin: 10%;
+    gap: 50px;
+    text-align: center;}
+
+.name-part{display: flex;gap: 10px;margin: 0 0 3%;}
+.inputN{
+    position: relative;
+    width: 450px;
+    display: flex;
+    margin: 30px;
+    border-radius: 5px;
+}
+.inputN input{
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    border: 1px solid #009999;
+    font-size: 1em;
+}
+.inputN span{
+    position: absolute;
+    left: 0;
+    font-size: 0.9em;
+    padding: 10px;
+    pointer-events: none;
+    color: #009999;
+    text-transform: uppercase;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+form button{
+    width:10rem;
+    height: 3em;
+    border-radius: 25px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: #009999;
+}
+.inputN input:valid ~ span,
+.inputN input:focus ~ span{
+    color: #0099ff;
+    transform: translateX(10px) translateY(-10px);
+    padding: 0 15px;
+    font-size: 0.95em;
+    background: #fff;
+    border:  1px solid #0099ff;
+    /* border-left:  1px solid #0099ff; */
+    /* border-right: 1px solid #0099ff; */
+    letter-spacing: 0.2em;
+}
+.inputN input:valid,
+.inputN input:focus{
+    border: 1px solid #0099ff;
+}
